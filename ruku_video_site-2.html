@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viral Video 2026 | Ruku Video</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f5f7;color:#17191c}
+header{background:#111827;color:#fff;padding:18px 16px;position:sticky;top:0;z-index:5}
+.wrap{max-width:900px;margin:auto}.brand{font-size:22px;font-weight:700}
+.search{margin-top:12px;width:100%;padding:11px 13px;border:0;border-radius:10px}
+main{padding:20px 16px}.hero{background:#fff;border-radius:16px;padding:18px;margin-bottom:18px}
+h1{margin:0 0 8px;font-size:24px}.muted{color:#667085}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px #00000010}
+.thumb{aspect-ratio:16/9;background:#d9dde3;display:flex;align-items:center;justify-content:center;font-size:42px}
+.card-body{padding:14px}.card h2{font-size:17px;margin:0 0 7px}.card:hover{transform:translateY(-2px);transition:.2s}.btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:9px;background:#111827;color:#fff;text-decoration:none;border:0;cursor:pointer}
+.video-box{background:#000;border-radius:14px;overflow:hidden}.video-box video{display:block;width:100%;max-height:520px}
+.ad-slot{margin:18px 0;padding:18px;border:1px dashed #98a2b3;border-radius:12px;text-align:center;color:#667085;background:#fff}
+footer{padding:28px 16px;text-align:center;color:#667085}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">🔥 Viral Video 2026</div><input class="search" id="search" placeholder="Search viral videos...">
+<div style="margin-top:12px;font-size:13px;opacity:.9">🔥 Trending &nbsp; • &nbsp; 🎬 New Videos &nbsp; • &nbsp; 📱 2026</div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<h1>🔥 Viral Video 2026</h1>
+<div class="muted">Trending original videos • Updated for 2026 • Watch on mobile</div>
+</section>
+
+<div class="ad-slot">Ad placement — paste your approved Monetag ad code here.</div>
+
+<section class="grid" id="grid">
+<article class="card" data-title="My First Video">
+<div class="thumb">▶</div>
+<div class="card-body"><h2>🔥 Viral Video 2026 — #1</h2><div class="muted">Original video • Trending now</div>
+<button class="btn" onclick="openVideo('videos/video1.mp4','🔥 Viral Video 2026 — #1')">Watch video</button></div>
+</article>
+<article class="card" data-title="My Second Video">
+<div class="thumb">▶</div>
+<div class="card-body"><h2>🔥 Viral Video 2026 — #2</h2><div class="muted">Original video • Trending now</div>
+<button class="btn" onclick="openVideo('videos/video2.mp4','🔥 Viral Video 2026 — #2')">Watch video</button></div>
+</article>
+</section>
+
+<section id="player" style="display:none;margin-top:20px">
+<h2 id="title"></h2>
+<div class="video-box"><video id="video" controls playsinline></video></div>
+<div class="ad-slot">Ad placement — use only an ad format and placement permitted by your ad network.</div>
+<button class="btn" onclick="closeVideo()">← Back to videos</button>
+</section>
+</main>
+<footer>© 2026 Ruku Video</footer>
+<script>
+function openVideo(src,title){
+  document.getElementById('grid').style.display='none';
+  document.querySelector('.hero').style.display='none';
+  document.getElementById('player').style.display='block';
+  document.getElementById('title').textContent=title;
+  const v=document.getElementById('video'); v.src=src; v.play().catch(()=>{});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function closeVideo(){
+  const v=document.getElementById('video'); v.pause(); v.removeAttribute('src'); v.load();
+  document.getElementById('player').style.display='none';
+  document.getElementById('grid').style.display='grid';
+  document.querySelector('.hero').style.display='block';
+}
+document.getElementById('search').addEventListener('input',e=>{
+ const q=e.target.value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>c.style.display=c.dataset.title.toLowerCase().includes(q)?'block':'none');
+});
+</script>
+</body>
+</html>
